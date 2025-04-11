@@ -1,4 +1,9 @@
 from django.shortcuts import render
+from core.models import Car
 
 def home(request):
-    return render(request, 'index.html')
+    cars = Car.objects.all()
+    context = {
+        'cars':cars
+    }
+    return render(request, 'index.html', context)

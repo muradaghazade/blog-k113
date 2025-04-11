@@ -6,6 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    salam
+    {% for car in cars %}
+        <div class="car">
+            <img width="300" src="{{ car.image.url }}" alt="">
+            <h1>{{ car.marka }}</h1>
+            <h2>{{ car.model }}</h2>
+            <p>{{ car.year }}</p>
+            <p>{{ car.odometer }}</p>
+            <p>{{ car.engine }}</p>
+            <p>{{ car.color }}</p>
+            <p>{{ car.text }}</p>
+        </div>
+    {% endfor %}
 </body>
 </html>
